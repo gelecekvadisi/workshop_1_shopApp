@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../model/product.dart';
 
 List<Product> productList = [
@@ -8,6 +10,7 @@ List<Product> productList = [
     size: 12,
     description: _description,
     image: "assets/images/bag_1.png",
+    backgroundColor: Color(0xFF3D82AE),
   ),
   Product(
     id: 2,
@@ -16,6 +19,7 @@ List<Product> productList = [
     size: 8,
     description: _description,
     image: "assets/images/bag_2.png",
+    backgroundColor: Color(0xFFD3A984),
   ),
   Product(
     id: 3,
@@ -24,6 +28,7 @@ List<Product> productList = [
     size: 10,
     description: _description,
     image: "assets/images/bag_3.png",
+    backgroundColor: Color(0xFF989493),
   ),
   Product(
     id: 4,
@@ -32,6 +37,7 @@ List<Product> productList = [
     size: 11,
     description: _description,
     image: "assets/images/bag_4.png",
+    backgroundColor: Color(0xFFE6B398),
   ),
   Product(
     id: 5,
@@ -40,6 +46,7 @@ List<Product> productList = [
     size: 12,
     description: _description,
     image: "assets/images/bag_5.png",
+    backgroundColor: Color(0xFFFB7883),
   ),
   Product(
     id: 6,
@@ -48,6 +55,7 @@ List<Product> productList = [
     size: 12,
     description: _description,
     image: "assets/images/bag_6.png",
+    backgroundColor: Color(0xFF9D9D9D),
   ),
 ];
 
