@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:workshop_1_project/model/product.dart';
 import 'package:workshop_1_project/util/constants.dart';
+import 'package:workshop_1_project/widgets/add_to_cart.dart';
 import 'package:workshop_1_project/widgets/app_bar.dart';
+import 'package:workshop_1_project/widgets/color_and_size_row.dart';
+import 'package:workshop_1_project/widgets/counter_with_fav_btn.dart';
+import 'package:workshop_1_project/widgets/description.dart';
 
 class DetailPage extends StatelessWidget {
   DetailPage({super.key, required this.product});
@@ -35,7 +39,7 @@ class DetailPage extends StatelessWidget {
 
   Container _buildBackgroundContainer(Size size) {
     return Container(
-      height: size.height * 0.57,
+      height: size.height * 0.45,
       width: size.width,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -47,15 +51,21 @@ class DetailPage extends StatelessWidget {
     );
   }
 
-  Padding _buildBody(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(Constants.defaultPadding),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          _buildTitle(context),
-          _buildPriceAndImage(context),
-        ],
+  SingleChildScrollView _buildBody(BuildContext context) {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(Constants.defaultPadding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            _buildTitle(context),
+            _buildPriceAndImage(context),
+            ColorAndSizeRow(product: product),
+            Description(product: product),
+            CounterWithFavBtn(),
+            AddToCart(product: product),
+          ],
+        ),
       ),
     );
   }
